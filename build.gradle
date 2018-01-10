@@ -1,0 +1,21 @@
+group 'org.mhdvsolutions'
+version '1.0.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+repositories {
+    maven { url 'https://repo.mhdv-solutions.org/skyruins/' }
+    maven { url 'http://repo.extendedclip.com/content/repositories/placeholderapi/' }
+}
+
+dependencies {
+    compileOnly 'org.bukkit:bukkit:+'
+    compileOnly 'me.clip:placeholderapi:+'
+    compileOnly fileTree(dir: 'libs', include: '*.jar')
+}
